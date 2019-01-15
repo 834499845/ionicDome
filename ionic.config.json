@@ -1,0 +1,13 @@
+{
+  "name": "appdevice",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/web",
+      "proxyUrl": "http://47.92.71.21:8000/web"
+    }
+  ]
+}

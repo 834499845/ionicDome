@@ -1,0 +1,217 @@
+// .scroll-content{
+
+// display: flex;
+// justify-content: space-between;
+// }
+.home_lf{
+    width: 100px;
+    background-color: #1e3049;
+    height: calc(100vh - 85px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    float: left;
+} 
+.home_lr{
+    width: calc(100vw - 100px);
+    background-color: #182a43;    
+    height: calc(100vh - 85px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    float: right;
+
+}
+.home_lf_item{
+    width: 100px;
+    height: 50px;
+    background-color: #253750;
+    border-top: 1px solid #2d465d;
+    overflow: hidden;    
+    color: #c7d5ea;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 20px;
+ 
+}
+.home_lf_item small{
+    color: #708397;
+    font-size: 14px;
+}
+.home_lf_Selectitem{
+    background: linear-gradient(to right, #396f90 , #63c7e4);
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+}
+.home_lf_Selectitem::after{
+    position: absolute;
+    left: 0;
+    width: 5px;
+    height: 50px;
+    background-color: #65e1ff;
+    content: ""
+}
+.home_lf_Selectitem small{
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+.home_lf_title{
+    height: 45px;
+    line-height: 45px;
+    padding-left: 15px;
+    color: #7a8da1;
+    font-size: 14px;
+}
+.home_lr_item{
+    min-height: 25px;
+    width: calc(100% - 7px);
+    margin-left: 7px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.lr_item_t{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1e4964;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.lr_item_t_lf{
+    color: #8ecbe0;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.lr_item_t_lf i{
+    margin-right: 5px;
+}
+.lr_item_t_lf small{
+    color: #416c87;
+    font-size: 12px;
+    margin-left: 3px;
+}
+.lr_item_t_lr{
+    display: flex;
+    align-items: center; 
+}
+.lr_item_t_iserror{
+    color: #d96263;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.lr_item_t_iswarning{
+    color: #c4b575;
+    margin-left: 3px;
+    margin-right: 7px;
+}
+.lr_item_bdUl{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home_lr_t_item{
+    background-color: rgb(40, 61, 78);   
+     margin-right: 3px;  
+      width: 32%;
+    min-height: 105px;
+    margin-top: 3px;
+    overflow: hidden;
+    padding-left: 10px;
+    position: relative;
+    padding-bottom: 5px;
+}
+.home_lr_t_item::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 99999px;
+    background-color: rgb(84, 117, 74);
+    content: ""
+}
+.home_lr_isErr{
+    background-color: #483b50 !important;  position: relative;
+}
+.home_lr_isWarning{
+     position: relative;
+}
+.home_lr_isWarning::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 99999px;
+    background-color: #dab470;
+    content: ""
+}
+.home_lr_isErr::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 99999px;
+    background-color: #f85756;
+    content: ""
+}
+.home_lr_isErr_title{
+    color: #fff;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin-top: 7px;
+}
+.home_lr_isErr_Name{
+    color: #a299a9;
+    min-height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 7px;
+}
+.home_lr_isErr_VAL{
+    color: #51bed6;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 2px;
+}
+.home_lr_isErr_VAL small{
+    color: #a299a9;
+    margin-left: 2px;
+}
+
+.home_lr_t_item_iswarning_err{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 14px;
+    width: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+.icon-play_fillTrams{
+    transform: rotate(90deg) !important;
+}
+.home_lr_t_item_iswarning,
+.home_lr_t_item_iserror{
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home_lr_t_item_iswarning{
+    background-color: #f39c0e;
+}
+.home_lr_t_item_iserror{    
+    background-color: #ff3840;
+    margin-right: 2px;
+}

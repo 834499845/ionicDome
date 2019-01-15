@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="majorcl">
+    <ion-title>设备列表</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="home_lf">
+    <div class="home_lf_title">
+      区域列表
+    </div>
+    <ul>
+      <li class="home_lf_item" (click)="itemClick(item,i)" [ngClass]="{'home_lf_Selectitem':isSelectItem == i}" *ngFor="let item of items; let i = index">
+        {{item.title}} <small>({{item.num}})</small>
+      </li>
+    </ul>
+  </div>
+  <div class="home_lr">
+    <ul>
+      <li class="home_lr_item" (click)="listClick(item,i)" *ngFor="let item of list; let i = index">
+        <div class="lr_item_t">
+          <div class="lr_item_t_lf">
+            <i class="iconfont icon-play_fill"  [ngClass]="{'icon-play_fillTrams':item.isShow}"></i>
+            {{item.title}} <small>({{item.num}})</small>
+          </div>
+          <div class="lr_item_t_lr">
+            <div *ngIf="item.iserror" class="lr_item_t_iserror">
+              <i class="iconfont icon-warning-circle-fill"></i>
+              {{item.iserror}}
+            </div>
+            <div *ngIf="item.iswarning" class="lr_item_t_iswarning">
+              <i class="iconfont icon-jubao"></i>
+              {{item.iswarning}}
+            </div>
+          </div>
+        </div>
+        <div class="lr_item_bd" *ngIf="item.isShow">
+          <ul class="lr_item_bdUl">
+            <li class="home_lr_t_item" (click)="listChrenClick(i,ai)" [ngClass]="{'home_lr_isErr':arrItem.iserror,'home_lr_isErr':arrItem.iserror && arrItem.iswarning,'home_lr_isWarning':arrItem.iswarning}" *ngFor="let arrItem of item.arr; let ai = index">
+              <div class="home_lr_isErr_title">{{arrItem.name}}</div>
+              <div class="home_lr_isErr_Name">{{arrItem.name1}}:</div>
+              <div class="home_lr_isErr_VAL">{{arrItem.value1}}<small>{{arrItem.valueUnit1}}</small></div>
+              <div class="home_lr_isErr_Name">{{arrItem.name2}}:</div>
+              <div class="home_lr_isErr_VAL">{{arrItem.value2}}<small>{{arrItem.valueUnit2}}</small></div>
+              <div class="home_lr_t_item_iswarning_err">
+                <div class="home_lr_t_item_iserror"  *ngIf="arrItem.iserror">{{arrItem.iserror}}</div>
+                <div class="home_lr_t_item_iswarning" *ngIf="arrItem.iswarning">{{arrItem.iswarning}}</div>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+
+
+      </li>
+    </ul>
+  </div>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismissModal()">
+        返回
+      </button>
+    </ion-buttons>
+    <ion-title>注册</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-avatar (click)="changePicture()" width="55" height="55">
+        <img [src]="placeholder" onerror="this.src='assets/imgs/17@3x.png'" />
+      </ion-avatar>
+    </ion-item>
+    <ion-item>
+      <ion-icon class="base_arrow_forward" name="ios-person" item-start></ion-icon>
+      <ion-input type="text" value="" placeholder="请输入您的昵称"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon class="base_arrow_forward" name="ios-phone-portrait" item-start></ion-icon>
+      <ion-input type="password" value="" placeholder="请输入手机号码"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon class="base_arrow_forward" name="ios-key" item-start></ion-icon>
+      <ion-input type="password" value="" placeholder="请输入验证码"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon class="base_arrow_forward" name="ios-lock" item-start></ion-icon>
+      <ion-input type="password" value="" placeholder="请输入密码，6-20位，包含数字和字母"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon class="base_arrow_forward" name="ios-lock" item-start></ion-icon>
+      <ion-input type="password" value="" placeholder="请确保再次密码一致"></ion-input>
+    </ion-item>
+    <div padding>
+      <button ion-button block color="primary" (click)="dismissModal(username, password)">注册</button>
+    </div>
+    <ion-item>
+      <div class="fwxy">
+        注册就表示您同意软件的<small>《服务协议》</small>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

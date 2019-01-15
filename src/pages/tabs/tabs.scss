@@ -1,0 +1,18 @@
+.tabbar {
+    background-color: #1a3962 !important;
+}
+.tab-button-text{
+    color: #86acc4 !important;
+}
+ .tab-button[aria-selected=true] .tab-button-text{
+    color: #fff !important;
+ }
+ .tab-button{
+     position: relative;
+     border-top: 3px solid #1f334f !important;    
+     background: linear-gradient(#1f334f, #143666); /* 标准的语法 */
+ }
+ .tab-button[aria-selected=true] {
+     border-top: 3px solid #10d2ff !important;
+     background: linear-gradient(#1f3d50, #0c7c9f); /* 标准的语法 */
+ }
